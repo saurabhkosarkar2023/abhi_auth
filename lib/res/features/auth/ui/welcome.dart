@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_auth_1/res/features/auth/ui/sigin.dart';
 
 class Welcome extends StatefulWidget {
   const Welcome({super.key});
@@ -14,8 +15,10 @@ class _WelcomeState extends State<Welcome> {
       appBar: AppBar(
         title: const Text("Welcome"),
       ),
-      body: const Center(
-        child: Text("Welcome page"),
+      body:  Center(
+        child: ElevatedButton(onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context) => const Signin(),));
+        }, child: Text("Sign in")),
       ),
     );
   }
